@@ -8,17 +8,17 @@ export default class ImageScreen extends React.Component {
         return (
             <View>
                 <ImageDetail
-                    title="Beach"
+                    title="Beach" style={{ width: 50, height: 50 }}
                     imageSource={require('../assets/beach.jpg')}
                     rating="5"
                 />
-                <ImageDetail
+                <ImageDetail style={{ width: 50, height: 50 }}
                     title="Forest"
                     imageSource={require('../assets/forest.jpg')}
                     rating="4"
                 />
                 <ImageDetail
-                    title="Mountain"
+                    title="Mountain" style={{ width: 50, height: 50 }}
                     imageSource={require('../assets/mountain.jpg')}
                     rating="3"
                 />
