@@ -4,7 +4,6 @@ import { Text, View, Button } from 'react-native';
 const HomeScreen = ({ navigation }) => {
     return (
         <View>
-            <Text> Home Screen</Text>
             <Button
                 title="Go to Component Screen"
                 onPress={() => navigation.navigate('Component')}
@@ -20,6 +19,10 @@ const HomeScreen = ({ navigation }) => {
             <Button
                 title="Go to Counter Screen"
                 onPress={() => navigation.navigate('Counter')}
+            />
+            <Button
+                title="Go to Image Screen"
+                onPress={() => navigation.navigate('Image')}
             />
         </View>
     );

@@ -6,12 +6,14 @@ import FriendScreen from './screens/FriendScreen';
 import HomeScreen from './screens/HomeScreen';
 import CounterScreen from './screens/CounterScreen';
 import { createStackNavigator, createAppContainer } from 'react-navigation';
+import ImageScreen from './screens/ImageScreen';
 
 const navigator = createStackNavigator({
   Component: ComponentScreen,
   Friend: FriendScreen,
   Student: StudentScreen,
   Home: HomeScreen,
+  Image: ImageScreen,
   Counter: CounterScreen
 },
   {
