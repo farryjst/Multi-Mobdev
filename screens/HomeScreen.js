@@ -1,30 +1,27 @@
 import React from 'react';
-import { Text, View, Button } from 'react-native';
+import { Text, View, Button, ImageBackground, BackHandler } from 'react-native';
 
-const HomeScreen = ({ navigation }) => {
+const HomeScreen = ({ navigation, BackHandler }) => {
     return (
-        <View>
-            <Text></Text>
-            <Button
-                title="Go to Component Screen"
-                onPress={() => navigation.navigate('Component')}
-            />
-            <Text></Text>
-            <Button
-                title="Go to Friend Screen"
-                onPress={() => navigation.navigate('Friend')}
-            />
-            <Text></Text>
-            <Button
-                title="Go to Student Screen"
-                onPress={() => navigation.navigate('Student')}
-            />
-            <Text></Text>
-            <Button
-                title="Go to Counter Screen"
-                onPress={() => navigation.navigate('Counter')}
-            />
-        </View>
+        <ImageBackground source={require('../assets/homeBackground.png')} style={{ width: '100%', height: '100%' }}>
+            <View>
+                <Text></Text>
+                <Button
+                    title="Tempat Wisata"
+                    onPress={() => navigation.navigate('Wisata')}
+                />
+                <Text></Text>
+                <Button
+                    title="Info"
+                    onPress={() => navigation.navigate('Info')}
+                />
+                <Text></Text>
+                <Button
+                    title="Exit"
+                    onPress={() => BackHandler.navigate('Exit')}
+                />
+            </View>
+        </ImageBackground>
     );
 };
 

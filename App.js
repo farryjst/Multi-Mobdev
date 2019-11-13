@@ -1,28 +1,27 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import ComponentScreen from './screens/ComponentScreen';
-import StudentScreen from './screens/StudentScreen';
-import FriendScreen from './screens/FriendScreen';
 import HomeScreen from './screens/HomeScreen';
-import CounterScreen from './screens/CounterScreen';
-import ImageScreen from './screens/ImageScreen';
+import WisataScreen from './screens/WisataScreen';
 import { createStackNavigator, createAppContainer } from 'react-navigation';
 
 const navigator = createStackNavigator({
-  Component: ComponentScreen,
-  Friend: FriendScreen,
-  Student: StudentScreen,
-  Home: HomeScreen,
-  Image: ImageScreen,
-  Counter: CounterScreen
+  Wisata: WisataScreen,
+  Home: HomeScreen
 },
   {
     initialRouteName: 'Home',
     defaultNavigationOptions: {
-      headerTitle: 'App Mobile Programming',
+      headerTitle: 'FINAL PROJECT',
       headerStyle: {
-        backgroundColor: 'grey'
+        backgroundColor: '#FF8700',
       },
+      headerTintColor: 'white',
+      headerTitleStyle: {
+        fontWeight: 'bold',
+        marginLeft: 'auto',
+        marginRight: 'auto'
+
+      }
     }
   });
 
