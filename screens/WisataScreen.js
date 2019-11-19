@@ -1,6 +1,5 @@
 import React from 'react';
 import { Text, View, FlatList, StyleSheet, Image, ImageBackground } from 'react-native';
-import { AuthSession } from 'expo';
 
 const wisata = [
     { name: 'Pulisan', imageUrl: 'https://pesona.travel/media/serunya-bermain-air-di-pantai-pulisan-likupang_115800_1140.jpg' },

@@ -19,8 +19,8 @@ const navigator = createStackNavigator({
       headerTitleStyle: {
         fontWeight: 'bold',
         marginLeft: 'auto',
-        marginRight: 'auto'
-
+        marginRight: 'auto',
+        padding: 20
       }
     }
   });
