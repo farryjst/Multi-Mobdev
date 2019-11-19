@@ -2,11 +2,13 @@ import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import HomeScreen from './screens/HomeScreen';
 import WisataScreen from './screens/WisataScreen';
+import VideoScreen from './screens/VideoScreen';
 import { createStackNavigator, createAppContainer } from 'react-navigation';
 
 const navigator = createStackNavigator({
   Wisata: WisataScreen,
-  Home: HomeScreen
+  Home: HomeScreen,
+  Video: VideoScreen
 },
   {
     initialRouteName: 'Home',

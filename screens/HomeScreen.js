@@ -14,7 +14,8 @@ const HomeScreen = ({ navigation }) => {
                     title="Explore"
                     onPress={() => navigation.navigate('Wisata')}
                 />
-                <TouchableOpacity>
+                <TouchableOpacity title="Video"
+                    onPress={() => navigation.navigate('Video')}>
                     <Image source={require('../assets/manado.png')} style={styles.ManadoStyle} />
                 </TouchableOpacity>
             </View>
@@ -31,7 +32,10 @@ const styles = StyleSheet.create({
     ManadoStyle: {
         resizeMode: "contain",
         width: '100%',
-        height: '30%'
+        height: '60%',
+        marginLeft: 'auto',
+        marginRight: 'auto',
+        marginTop: -20
     },
     DescManado: {
         width: '100%',
