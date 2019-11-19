@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, View, Button, ImageBackground, StyleSheet, Image } from 'react-native';
+import { Text, View, Button, ImageBackground, StyleSheet, Image, TouchableOpacity } from 'react-native';
 
 const HomeScreen = ({ navigation }) => {
     return (
@@ -14,7 +14,9 @@ const HomeScreen = ({ navigation }) => {
                     title="Explore"
                     onPress={() => navigation.navigate('Wisata')}
                 />
-                <Image source={require('../assets/manado.png')} style={styles.ManadoStyle} />
+                <TouchableOpacity>
+                    <Image source={require('../assets/manado.png')} style={styles.ManadoStyle} />
+                </TouchableOpacity>
             </View>
         </ImageBackground>
     );
