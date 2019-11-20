@@ -43,7 +43,7 @@ const styles = StyleSheet.create({
         color: 'white',
         paddingLeft: 20,
         paddingRight: 20,
-        backgroundColor: 'rgba(255, 255 ,255, .2)'
+        backgroundColor: 'rgba(255, 255 ,255, .1)'
     },
     titleManado: {
         color: 'white',
@@ -51,10 +51,10 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
         textShadowColor: 'grey',
         textShadowOffset: {
-            width: 2,
-            height: 2,
+            width: 1,
+            height: 1,
         },
-        textShadowRadius: 2.2,
+        textShadowRadius: 5,
         paddingTop: 10,
         marginLeft: 'auto',
         marginRight: 'auto'
