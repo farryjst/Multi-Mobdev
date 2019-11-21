@@ -24,7 +24,6 @@ const WisataScreen = () => {
                         </Text>
                     </View>
                 }
-
                 keyExtractor={item => item.name}
             />
         </ImageBackground>
