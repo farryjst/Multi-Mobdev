@@ -13,15 +13,13 @@ const navigator = createStackNavigator({
   {
     initialRouteName: 'Home',
     defaultNavigationOptions: {
-      headerTitle: 'FINAL PROJECT',
+      headerTitle: ' FINAL PROJECT',
       headerStyle: {
         backgroundColor: '#FF8700',
       },
       headerTintColor: 'white',
       headerTitleStyle: {
         fontWeight: 'bold',
-        marginLeft: 'auto',
-        marginRight: 'auto',
         padding: 20
       }
     }
