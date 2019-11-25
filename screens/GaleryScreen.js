@@ -20,7 +20,8 @@ export default class Galery extends Component {
                 { id: 2, likes: "11K", image: "https://allesgroen.files.wordpress.com/2017/05/pulau-manado-tua.jpg" },
                 { id: 3, likes: "29K", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQibnVbaUcYzmPWIb1iuFuUjR3dyjWBg4E-ecxthAUwGt15Wx8Q&s" },
                 { id: 4, likes: "33K", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqwyrVGCCp9FiACB5yvuGx5pzFeHoxHaS3_h09eAbunpHJNCs_Zg&s" },
-                { id: 5, likes: "10K", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWqviDiwOtUUn2_xzGTlsuXpA9La_YNBPCjfx6CdLsuVRGcVdmrg&s" }
+                { id: 5, likes: "10K", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWqviDiwOtUUn2_xzGTlsuXpA9La_YNBPCjfx6CdLsuVRGcVdmrg&s" },
+                { id: 5, likes: "19K", image: "https://cdns.klimg.com/merdeka.com/i/w/news/2019/07/05/1091157/670x335/tengok-pariwisata-di-manado-jokowi-malam-malam-blusukan-ke-jendela-indonesia.jpg" }
             ]
         };
     }
@@ -61,7 +62,6 @@ export default class Galery extends Component {
                             </View>
                         )
                     }} />
-
             </View>
         );
     }
@@ -104,7 +104,7 @@ const styles = StyleSheet.create({
     cardImage: {
         flex: 1,
         height: 150,
-        marginTop: 20,
+        marginTop: 10,
         width: null,
     },
     /******** card components **************/

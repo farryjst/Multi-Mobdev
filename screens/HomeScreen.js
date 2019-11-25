@@ -12,13 +12,17 @@ const HomeScreen = ({ navigation }) => {
                 </View>
                 <Text></Text>
                 <Button
-                    title="Explore"
+                    title="Explore Wisata Manado"
                     onPress={() => navigation.navigate('Wisata')}
                 />
-                <TouchableOpacity title="Galery"
-                    onPress={() => navigation.navigate('Galery')}>
+                <Text></Text>
+                <Button
+                    title="Galery Manado"
+                    onPress={() => navigation.navigate('Galery')}
+                />
+                <View>
                     <Image source={require('../assets/manado.png')} style={styles.ManadoStyle} />
-                </TouchableOpacity>
+                </View>
             </View>
         </ImageBackground>
     );
@@ -32,11 +36,11 @@ const styles = StyleSheet.create({
     },
     ManadoStyle: {
         resizeMode: "contain",
-        width: '100%',
-        height: '60%',
+        width: '90%',
+        height: '50%',
         marginLeft: 'auto',
         marginRight: 'auto',
-        marginTop: -20
+        marginTop: -2
     },
     DescManado: {
         width: '100%',
