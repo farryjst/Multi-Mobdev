@@ -4,25 +4,28 @@ import HomeScreen from './screens/HomeScreen';
 import WisataScreen from './screens/WisataScreen';
 import GaleryScreen from './screens/GaleryScreen';
 import ComponentScreen from './screens/ComponentScreen';
+import AboutScreen from './screens/AboutScreen';
 import { createStackNavigator, createAppContainer } from 'react-navigation';
 
 const navigator = createStackNavigator({
   Wisata: WisataScreen,
   Home: HomeScreen,
   Galery: GaleryScreen,
-  Component: ComponentScreen
+  Component: ComponentScreen,
+  About: AboutScreen
 },
   {
     initialRouteName: 'Home',
     defaultNavigationOptions: {
-      headerTitle: ' FINAL PROJECT',
+      headerTitle: 'FinalProject: MobDev',
       headerStyle: {
-        backgroundColor: '#FF8700',
+        backgroundColor: '#0E2F56',
       },
       headerTintColor: 'white',
       headerTitleStyle: {
         fontWeight: 'bold',
-        padding: 20
+        fontSize: 25,
+        textAlign: 'center'
       }
     }
   });

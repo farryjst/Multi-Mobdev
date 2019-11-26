@@ -170,7 +170,7 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         justifyContent: 'center',
         alignItems: 'center',
-        borderRadius: 30,
+        borderRadius: 50,
         backgroundColor: "#00BFFF",
     },
     followButtonText: {
