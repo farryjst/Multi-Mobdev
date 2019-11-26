@@ -12,17 +12,19 @@ const HomeScreen = ({ navigation }) => {
                 </View>
                 <Text></Text>
                 <Button
-                    title="Explore Wisata Manado"
+                    title="Explore Manado"
                     onPress={() => navigation.navigate('Wisata')}
                 />
                 <Text></Text>
                 <Button
-                    title="Galery Manado"
+                    title="Maps"
                     onPress={() => navigation.navigate('Galery')}
                 />
-                <View>
-                    <Image source={require('../assets/manado.png')} style={styles.ManadoStyle} />
-                </View>
+                <TouchableOpacity onPress={() => navigation.navigate('Component')}>
+                    <View>
+                        <Image source={require('../assets/manado.png')} style={styles.ManadoStyle} />
+                    </View>
+                </TouchableOpacity>
             </View>
         </ImageBackground>
     );
@@ -36,11 +38,9 @@ const styles = StyleSheet.create({
     },
     ManadoStyle: {
         resizeMode: "contain",
-        width: '90%',
-        height: '50%',
-        marginLeft: 'auto',
-        marginRight: 'auto',
-        marginTop: -2
+        width: '115%',
+        height: '65%',
+        marginHorizontal: -29
     },
     DescManado: {
         width: '100%',
@@ -48,7 +48,8 @@ const styles = StyleSheet.create({
         color: 'white',
         paddingLeft: 20,
         paddingRight: 20,
-        backgroundColor: 'rgba(255, 255 ,255, .2)'
+        backgroundColor: 'rgba(255, 255 ,255, .2)',
+        paddingTop: 20
     },
     titleManado: {
         color: 'white',

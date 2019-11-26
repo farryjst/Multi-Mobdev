@@ -3,12 +3,14 @@ import { StyleSheet, Text, View } from 'react-native';
 import HomeScreen from './screens/HomeScreen';
 import WisataScreen from './screens/WisataScreen';
 import GaleryScreen from './screens/GaleryScreen';
+import ComponentScreen from './screens/ComponentScreen';
 import { createStackNavigator, createAppContainer } from 'react-navigation';
 
 const navigator = createStackNavigator({
   Wisata: WisataScreen,
   Home: HomeScreen,
-  Galery: GaleryScreen
+  Galery: GaleryScreen,
+  Component: ComponentScreen
 },
   {
     initialRouteName: 'Home',
@@ -25,7 +27,6 @@ const navigator = createStackNavigator({
     }
   });
 
-export default createAppContainer(navigator);
 
 const styles = StyleSheet.create({
   container: {
@@ -35,3 +36,6 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
 });
+
+export default createAppContainer(navigator);
+
