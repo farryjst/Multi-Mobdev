@@ -8,7 +8,8 @@ import {
     FlatList,
     Dimensions,
     Modal,
-    ScrollView
+    ScrollView,
+    ImageBackground
 } from 'react-native';
 
 export default class Users extends Component {
@@ -19,34 +20,27 @@ export default class Users extends Component {
             modalVisible: false,
             userSelected: [],
             data: [
-                { id: 1, name: "Mark Doe", position: "CEO", image: "https://bootdey.com/img/Content/avatar/avatar7.png", about: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo." },
-                { id: 2, name: "John Doe", position: "CTO", image: "https://bootdey.com/img/Content/avatar/avatar1.png", about: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo." },
-                { id: 3, name: "Clark Man", position: "Creative designer", image: "https://bootdey.com/img/Content/avatar/avatar6.png", about: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo." },
-                { id: 4, name: "Jaden Boor", position: "Front-end dev", image: "https://bootdey.com/img/Content/avatar/avatar5.png", about: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo." },
-                { id: 5, name: "Srick Tree", position: "Backend-end dev", image: "https://bootdey.com/img/Content/avatar/avatar4.png", about: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo." },
-                { id: 6, name: "John Doe", position: "Creative designer", image: "https://bootdey.com/img/Content/avatar/avatar3.png", about: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo." },
-                { id: 7, name: "John Doe", position: "Manager", image: "https://bootdey.com/img/Content/avatar/avatar2.png", about: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo." },
-                { id: 8, name: "John Doe", position: "IOS dev", image: "https://bootdey.com/img/Content/avatar/avatar1.png", about: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo." },
-                { id: 9, name: "John Doe", position: "Web dev", image: "https://bootdey.com/img/Content/avatar/avatar4.png", about: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo." },
-                { id: 10, name: "John Doe", position: "Analyst", image: "https://bootdey.com/img/Content/avatar/avatar7.png", about: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo." },
+                { id: 1, name: "Pulisan", image: "https://assets-a2.kompasiana.com/items/album/2018/11/11/dsc-0662-5be71463677ffb580a496e07.jpg?t=o&v=350", about: "Lokasi : Desa Kinunang Timur, Kecamatan Likupang, Kabupaten Minahasa Utara, Sulawesi Utara." },
+                { id: 2, name: "Bunaken", image: "https://cdn0-production-images-kly.akamaized.net/XvOBrhm59ErFklrWv_8imr9ua1M=/640x360/smart/filters:quality(75):strip_icc():format(jpeg)/kly-media-production/medias/1521558/original/028704100_1488256531-6._Taman_Laut_Bunaken_-_Reservasi.jpg", about: "Lokasi : Teluk Manado, Sulawesi Utara" },
+                { id: 3, name: "Danau Linow", image: "https://www.indonesiakaya.com/uploads/_images_gallery/12__Duduk_santai_dan_memandangi_keindahan_Danau_Linow_memberikan_nuansa_ketenangan_tersendiri.jpg", about: "Lokasi : Lahendong, Kecamatan Tomohon Selatan, Kota Tomohon, Sulawesi Utara." },
+                { id: 4, name: "Gardena Country Inn", image: "https://pix10.agoda.net/hotelImages/729/729477/729477_14090913310021969043.jpg?s=1024x768", about: "Lokasi: Jl. Kawiley, Kakaskasen Dua, Tomohon Utara, Kota Tomohon, Sulawesi Utara." },
+                { id: 5, name: "Gunung Payung", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTETRe02gPYONWVC98LDj49wn3I4VhjxbAnTxzB3qyOWHCqeACrNQ&s", about: "Lokasi : Kecamatan Ranoyapo, Kabupaten Minahasa Utara, Sulawesi Utara." },
+                { id: 6, name: "Hutan Pinus Lahendong", image: "https://indonesia.tripcanvas.co/id/wp-content/uploads/sites/2/2018/10/15-2-by-christyangkouw-740x493.jpg", about: "Lokasi : Jalan Lahendong, Lahendong, Tomohon Selatan, Kota Tomohon, Sulawesi Utara." },
+                { id: 7, name: "Rumah Alam Adventure Park Manado", image: "https://indonesia.tripcanvas.co/id/wp-content/uploads/sites/2/2018/10/24-3-by-ekatuna40@rumahalam.manado@vanesaechaa-740x740.jpg", about: "Lokasi :  Jalan Ring Road Manado II, Kairagi Satu, Mapanget, Kairagi Weru, Paal Dua, Kota Manado, Sulawesi Utara." }
             ]
         };
     }
-
     clickEventListener = (item) => {
         this.setState({ userSelected: item }, () => {
             this.setModalVisible(true);
         });
     }
-
     setModalVisible(visible) {
         this.setState({ modalVisible: visible });
     }
-
     render() {
         return (
             <View style={styles.container}>
-
                 <FlatList
                     style={styles.userList}
                     columnWrapperStyle={styles.listContainer}
@@ -62,13 +56,12 @@ export default class Users extends Component {
                                     <Text style={styles.name}>{item.name}</Text>
                                     <Text style={styles.position}>{item.position}</Text>
                                     <TouchableOpacity style={styles.followButton} onPress={() => this.clickEventListener(item)}>
-                                        <Text style={styles.followButtonText}>Follow</Text>
+                                        <Text style={styles.followButtonText}>Details</Text>
                                     </TouchableOpacity>
                                 </View>
                             </TouchableOpacity>
                         )
                     }} />
-
                 <Modal
                     animationType={'fade'}
                     transparent={true}
@@ -101,7 +94,8 @@ export default class Users extends Component {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: "#eeeeee"
+        backgroundColor: "#eeeeee",
+        paddingTop: 20
     },
     header: {
         backgroundColor: "#00CED1",
@@ -133,9 +127,6 @@ const styles = StyleSheet.create({
         height: 90,
         borderRadius: 45,
     },
-
-
-
     card: {
         shadowColor: '#00000021',
         shadowOffset: {
@@ -155,7 +146,7 @@ const styles = StyleSheet.create({
     },
 
     name: {
-        fontSize: 18,
+        fontSize: 15,
         flex: 1,
         alignSelf: 'center',
         color: "#008080",
@@ -172,6 +163,7 @@ const styles = StyleSheet.create({
     },
 
     followButton: {
+        marginHorizontal: 50,
         marginTop: 10,
         height: 35,
         width: 100,
@@ -195,7 +187,7 @@ const styles = StyleSheet.create({
     popupOverlay: {
         backgroundColor: "#00000057",
         flex: 1,
-        marginTop: 30
+        marginTop: 56
     },
     popupContent: {
         //alignItems: 'center',
@@ -224,5 +216,9 @@ const styles = StyleSheet.create({
     modalInfo: {
         alignItems: 'center',
         justifyContent: 'center',
+    },
+    txtClose: {
+        marginTop: -10,
+        color: 'white'
     }
 }); 
