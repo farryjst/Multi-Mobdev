@@ -13,10 +13,10 @@ const HomeScreen = ({ navigation }) => {
                 <Text></Text>
                 <View style={styles.ButtonCont}>
                     <TouchableOpacity style={styles.ButtonStyle} onPress={() => navigation.navigate('Wisata')} >
-                        <Text>EXPLORE MANADO</Text>
+                        <Text>EXPLORE WISATA MANADO</Text>
                     </TouchableOpacity>
                     <TouchableOpacity style={styles.ButtonStyle} onPress={() => navigation.navigate('Galery')}>
-                        <Text>MAPS</Text>
+                        <Text>EXPLORE MAPS</Text>
                     </TouchableOpacity>
                     <TouchableOpacity style={styles.ButtonStyle} onPress={() => navigation.navigate('About')}>
                         <Text>ABOUT</Text>
@@ -69,7 +69,7 @@ const styles = StyleSheet.create({
         paddingRight: 20,
         backgroundColor: 'rgba(34, 49, 63, .1)',
         paddingTop: 10,
-        paddingBottom: 10,
+        paddingBottom: 20,
     },
     titleManado: {
         color: 'white',
