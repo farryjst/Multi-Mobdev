@@ -13,13 +13,13 @@ const HomeScreen = ({ navigation }) => {
                 <Text></Text>
                 <View style={styles.ButtonCont}>
                     <TouchableOpacity style={styles.ButtonStyle} onPress={() => navigation.navigate('Wisata')} >
-                        <Text>EXPLORE WISATA MANADO</Text>
+                        <Text style={{ color: 'white' }}>EXPLORE WISATA MANADO</Text>
                     </TouchableOpacity>
                     <TouchableOpacity style={styles.ButtonStyle} onPress={() => navigation.navigate('Galery')}>
-                        <Text>EXPLORE MAPS</Text>
+                        <Text style={{ color: 'white' }}>EXPLORE MAPS</Text>
                     </TouchableOpacity>
                     <TouchableOpacity style={styles.ButtonStyle} onPress={() => navigation.navigate('About')}>
-                        <Text>ABOUT</Text>
+                        <Text style={{ color: 'white', fontWeight: 'bold' }}>ABOUT</Text>
                     </TouchableOpacity>
                     {/* <Button
                         title="Explore Manado"
@@ -51,10 +51,11 @@ const styles = StyleSheet.create({
     ButtonCont: {
         paddingLeft: 50,
         paddingRight: 50,
+        // backgroundColor: 'rgba(34, 49, 63, .2)',
     },
     ButtonStyle: {
         alignItems: 'center',
-        backgroundColor: '#d9dfdc',
+        backgroundColor: '#20639B',
         justifyContent: 'center',
         borderRadius: 60,
         marginVertical: 15,
@@ -67,7 +68,7 @@ const styles = StyleSheet.create({
         color: 'white',
         paddingLeft: 20,
         paddingRight: 20,
-        backgroundColor: 'rgba(34, 49, 63, .1)',
+        // backgroundColor: 'rgba(34, 49, 63, .2)',
         paddingTop: 10,
         paddingBottom: 20,
     },
