@@ -20,14 +20,9 @@ export default class Users extends Component {
             modalVisible: false,
             userSelected: [],
             data: [
-                { id: 1, name: "Pulisan", image: "https://assets-a2.kompasiana.com/items/album/2018/11/11/dsc-0662-5be71463677ffb580a496e07.jpg?t=o&v=350", about: "Lokasi : Desa Kinunang Timur, Kecamatan Likupang, Kabupaten Minahasa Utara, Sulawesi Utara." },
-                { id: 2, name: "Bunaken", image: "https://cdn0-production-images-kly.akamaized.net/XvOBrhm59ErFklrWv_8imr9ua1M=/640x360/smart/filters:quality(75):strip_icc():format(jpeg)/kly-media-production/medias/1521558/original/028704100_1488256531-6._Taman_Laut_Bunaken_-_Reservasi.jpg", about: "Lokasi : Teluk Manado, Sulawesi Utara" },
-                { id: 3, name: "Danau Linow", image: "https://www.indonesiakaya.com/uploads/_images_gallery/12__Duduk_santai_dan_memandangi_keindahan_Danau_Linow_memberikan_nuansa_ketenangan_tersendiri.jpg", about: "Lokasi : Lahendong, Kecamatan Tomohon Selatan, Kota Tomohon, Sulawesi Utara." },
-                { id: 4, name: "Gardena Country Inn", image: "https://pix10.agoda.net/hotelImages/729/729477/729477_14090913310021969043.jpg?s=1024x768", about: "Lokasi: Jl. Kawiley, Kakaskasen Dua, Tomohon Utara, Kota Tomohon, Sulawesi Utara." },
-                { id: 5, name: "Gunung Payung", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTETRe02gPYONWVC98LDj49wn3I4VhjxbAnTxzB3qyOWHCqeACrNQ&s", about: "Lokasi : Kecamatan Ranoyapo, Kabupaten Minahasa Utara, Sulawesi Utara." },
-                { id: 6, name: "Hutan Pinus Lahendong", image: "https://indonesia.tripcanvas.co/id/wp-content/uploads/sites/2/2018/10/15-2-by-christyangkouw-740x493.jpg", about: "Lokasi : Jalan Lahendong, Lahendong, Tomohon Selatan, Kota Tomohon, Sulawesi Utara." },
-                { id: 7, name: "Rumah Alam Adventure Park Manado", image: "https://indonesia.tripcanvas.co/id/wp-content/uploads/sites/2/2018/10/24-3-by-ekatuna40@rumahalam.manado@vanesaechaa-740x740.jpg", about: "Lokasi :  Jalan Ring Road Manado II, Kairagi Satu, Mapanget, Kairagi Weru, Paal Dua, Kota Manado, Sulawesi Utara." }
-            ]
+                { id: 1, name: "Pulisan", position: "Likupang", image: "https://assets-a2.kompasiana.com/items/album/2018/11/11/dsc-0662-5be71463677ffb580a496e07.jpg?t=o&v=350", about: "Pasir pantai yang indah, bebatuan yang eksotis serta bukit savana yang memukau. Pemandangan komplit yang bisa dinikmati di Pantai Pulisan, Kecamatan Likupang, Kabupaten Minahasa Utara, Sulawesi Utara. Pantai ini terletak kurang lebih 2 jam perjalanan dari Kota Manado arah ke Likupang Timur. Seakan memiliki magnet, Pantai Pulisan dapat menarik masyarakat untuk menikmati sajian alam dengan beragam pesonanya." },
+                { id: 2, name: "Bunaken", position: "Teluk Manado", image: "https://cdn0-production-images-kly.akamaized.net/XvOBrhm59ErFklrWv_8imr9ua1M=/640x360/smart/filters:quality(75):strip_icc():format(jpeg)/kly-media-production/medias/1521558/original/028704100_1488256531-6._Taman_Laut_Bunaken_-_Reservasi.jpg", about: "Bunaken adalah sebuah pulau seluas 8,08 km² di Teluk Manado, yang terletak di utara pulau Sulawesi, Indonesia. Pulau ini merupakan bagian dari kota Manado, ibu kota provinsi Sulawesi Utara, Indonesia. Pulau Bunaken dapat di tempuh dengan kapal cepat (speed boat) atau kapal sewaan dengan perjalanan sekitar 30 menit dari pelabuhan kota Manado. Di sekitar pulau Bunaken terdapat taman laut Bunaken yang merupakan bagian dari Taman Nasional Bunaken. Taman laut ini memiliki biodiversitas kelautan salah satu yang tertinggi di dunia. Selam scuba menarik banyak pengunjung ke pulau ini. Secara keseluruhan taman laut Bunaken meliputi area seluas 75.265 hektare dengan lima pulau yang berada di dalamnya, yakni Pulau Manado Tua (Manarauw), Pulau Bunaken, Pulau Siladen, Pulau Mantehage berikut beberapa anak pulaunya, dan Pulau Naen. Meskipun meliputi area 75.265 hektare, lokasi penyelaman (diving) hanya terbatas di masing-masing pantai yang mengelilingi kelima pulau itu." },
+                { id: 3, name: "Danau Linow", position: "Tomohon", image: "https://www.indonesiakaya.com/uploads/_images_gallery/12__Duduk_santai_dan_memandangi_keindahan_Danau_Linow_memberikan_nuansa_ketenangan_tersendiri.jpg", about: "Berjarak 30 km dari Kota Manado atau memakan waktu sekitar 1 jam perjalanan, Danau Linow dapat ditempuh 3 km arah ke barat dari Kota Tomohon. Selama perjalanan, kita disajikan pemandangan hijau dari perbukitan yang ditumbuhi pepohonan besar. Gunung Lokon yang masih aktif juga ikut menjadi panorama yang tersaji di sini. Memiliki bentuk hampir segitiga sempurna, gunung ini seakan memanjakan mata dengan hijaunya pepohonan." }]
         };
     }
     clickEventListener = (item) => {
@@ -50,7 +45,7 @@ export default class Users extends Component {
                     }}
                     renderItem={({ item }) => {
                         return (
-                            <TouchableOpacity style={styles.card} onPress={() => { this.clickEventListener(item) }}>
+                            <View style={styles.card} onPress={() => { this.clickEventListener(item) }}>
                                 <Image style={styles.image} source={{ uri: item.image }} />
                                 <View style={styles.cardContent}>
                                     <Text style={styles.name}>{item.name}</Text>
@@ -59,7 +54,7 @@ export default class Users extends Component {
                                         <Text style={styles.followButtonText}>Details</Text>
                                     </TouchableOpacity>
                                 </View>
-                            </TouchableOpacity>
+                            </View>
                         )
                     }} />
                 <Modal
@@ -94,7 +89,7 @@ export default class Users extends Component {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: "#eeeeee",
+        backgroundColor: "#b3c7d6ff",
         paddingTop: 20
     },
     header: {
@@ -123,9 +118,9 @@ const styles = StyleSheet.create({
         marginTop: 10
     },
     image: {
-        width: 90,
-        height: 90,
-        borderRadius: 45,
+        width: 200,
+        height: 200,
+        borderRadius: 25,
     },
     card: {
         shadowColor: '#00000021',
@@ -146,31 +141,31 @@ const styles = StyleSheet.create({
     },
 
     name: {
-        fontSize: 15,
+        fontSize: 25,
         flex: 1,
-        alignSelf: 'center',
         color: "#008080",
         fontWeight: 'bold'
     },
     position: {
         fontSize: 14,
         flex: 1,
-        alignSelf: 'center',
-        color: "#696969"
+        color: "#696969",
+        paddingBottom: 100
     },
     about: {
-        marginHorizontal: 10
+        marginHorizontal: 10,
+        textAlign: 'justify',
     },
 
     followButton: {
-        marginHorizontal: 50,
+        marginHorizontal: 30,
         marginTop: 10,
         height: 35,
         width: 100,
         flexDirection: 'row',
         justifyContent: 'center',
         alignItems: 'center',
-        borderRadius: 50,
+        borderRadius: 20,
         backgroundColor: "#00BFFF",
     },
     followButtonText: {
@@ -215,7 +210,7 @@ const styles = StyleSheet.create({
     },
     modalInfo: {
         alignItems: 'center',
-        justifyContent: 'center',
+        justifyContent: 'center'
     },
     txtClose: {
         marginTop: -10,

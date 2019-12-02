@@ -17,14 +17,14 @@ const navigator = createStackNavigator({
   {
     initialRouteName: 'Home',
     defaultNavigationOptions: {
-      headerTitle: 'FinalProject: MobDev',
+      headerTitle: 'FinalProject: Multiplatform Programming',
       headerStyle: {
         backgroundColor: '#0E2F56',
       },
       headerTintColor: 'white',
       headerTitleStyle: {
         fontWeight: 'bold',
-        fontSize: 25,
+        fontSize: 15,
         textAlign: 'center'
       }
     }

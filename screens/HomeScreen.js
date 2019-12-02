@@ -4,24 +4,37 @@ import { Text, View, Button, ImageBackground, StyleSheet, Image, TouchableOpacit
 const HomeScreen = ({ navigation }) => {
     return (
         <ImageBackground source={require('../assets/homeBackground.png')} style={{ width: '100%', height: '100%' }}>
-            <View>
-                <View style={styles.DescManado}>
-                    <Text style={styles.titleManado}>M A N A D O</Text>
-                    <Image source={require('../assets/manado1.png')} style={styles.LogoManado} />
-                    <Text style={styles.textDescManado}>    Kota Manado berada di wilayah administrasi Provinsi Sulawesi Utara, sekaligus merupakan ibu kota provinsi tersebut. Dengan Suku Minahasa sebagai suku terbesarnya, Kota Manado memiliki semboyan yang cukup unik. Yaitu Si Tou Timou Tumou Tou, sebuah seboyan hidup bagi rakyat Minahasa yang dalam bahasa Indonesia berarti “Manusia satu memanusiakan manusia lainnya”. Wilayah perairan Kota Manado juga meliputi beberapa pulau. Terdapat beberapa pulau besar di perairan Manado adalah Pulau Bunaken, Pulau Siladen dan Pulau Mantehage. Di pulau-pulau tersebut, wisata bahari menjadi wisata andalan Kota Manado. Karena pulau-pulau tersebut memang memiliki pemandangan yang sangat indah dan mengagumkan. Tak hanya itu, Anda juga akan takjub dengan keindahan pemandangan dan kekayaan bawah lautnya. Seperti contoh Pulau Bunaken dengan Taman Laut Nasional Bunaken.</Text>
-                </View>
-                <Text></Text>
-                <View style={styles.ButtonCont}>
-                    <TouchableOpacity style={styles.ButtonStyle} onPress={() => navigation.navigate('Wisata')} >
-                        <Text style={{ color: 'white' }}>EXPLORE WISATA MANADO</Text>
+            <ScrollView>
+                <View>
+                    <View style={styles.DescManado}>
+                        <Text style={styles.titleManado}>M A N A D O</Text>
+                        <Image source={require('../assets/manado1.png')} style={styles.LogoManado} />
+                        <Text style={styles.textDescManado}>    Kota Manado berada di wilayah administrasi Provinsi Sulawesi Utara, sekaligus merupakan ibu kota provinsi tersebut. Dengan Suku Minahasa sebagai suku terbesarnya, Kota Manado memiliki semboyan yang cukup unik. Yaitu Si Tou Timou Tumou Tou, sebuah seboyan hidup bagi rakyat Minahasa yang dalam bahasa Indonesia berarti “Manusia satu memanusiakan manusia lainnya”. Wilayah perairan Kota Manado juga meliputi beberapa pulau. Terdapat beberapa pulau besar di perairan Manado adalah Pulau Bunaken, Pulau Siladen dan Pulau Mantehage. Di pulau-pulau tersebut, wisata bahari menjadi wisata andalan Kota Manado. Karena pulau-pulau tersebut memang memiliki pemandangan yang sangat indah dan mengagumkan. Tak hanya itu, Anda juga akan takjub dengan keindahan pemandangan dan kekayaan bawah lautnya. Seperti contoh Pulau Bunaken dengan Taman Laut Nasional Bunaken.</Text>
+                    </View>
+                    <TouchableOpacity onPress={() => navigation.navigate('Component')}>
+                        <Image source={require('../assets/manado.png')} style={{
+                            width: 300,
+                            height: 300,
+                            resizeMode: 'contain',
+                            alignItems: 'center',
+                            justifyContent: 'center',
+                            marginHorizontal: 60,
+                            marginVertical: -90
+                        }} />
                     </TouchableOpacity>
-                    <TouchableOpacity style={styles.ButtonStyle} onPress={() => navigation.navigate('Galery')}>
-                        <Text style={{ color: 'white' }}>EXPLORE MAPS</Text>
-                    </TouchableOpacity>
-                    <TouchableOpacity style={styles.ButtonStyle} onPress={() => navigation.navigate('About')}>
-                        <Text style={{ color: 'white', fontWeight: 'bold' }}>ABOUT</Text>
-                    </TouchableOpacity>
-                    {/* <Button
+                    <Text></Text>
+                    <Text></Text>
+                    <View style={styles.ButtonCont}>
+                        <TouchableOpacity style={styles.ButtonStyle} onPress={() => navigation.navigate('Wisata')} >
+                            <Text style={{ color: 'white' }}>EXPLORE WISATA MANADO</Text>
+                        </TouchableOpacity>
+                        <TouchableOpacity style={styles.ButtonStyle} onPress={() => navigation.navigate('Galery')}>
+                            <Text style={{ color: 'white' }}>EXPLORE MAPS</Text>
+                        </TouchableOpacity>
+                        <TouchableOpacity style={styles.ButtonStyle} onPress={() => navigation.navigate('About')}>
+                            <Text style={{ color: 'white', fontWeight: 'bold' }}>ABOUT</Text>
+                        </TouchableOpacity>
+                        {/* <Button
                         title="Explore Manado"
                         onPress={() => navigation.navigate('Wisata')}
                     />
@@ -30,19 +43,9 @@ const HomeScreen = ({ navigation }) => {
                         title="Maps"
                         onPress={() => navigation.navigate('Galery')}
                     /> */}
+                    </View>
                 </View>
-                <TouchableOpacity onPress={() => navigation.navigate('Component')}>
-                    <Image source={require('../assets/manado.png')} style={{
-                        width: 200,
-                        height: 200,
-                        resizeMode: 'contain',
-                        alignItems: 'center',
-                        justifyContent: 'center',
-                        marginHorizontal: 110,
-                        marginVertical: -40
-                    }} />
-                </TouchableOpacity>
-            </View>
+            </ScrollView>
         </ImageBackground>
     );
 };
@@ -86,7 +89,7 @@ const styles = StyleSheet.create({
     },
     textDescManado: {
         color: 'white',
-        fontSize: 16,
+        fontSize: 20,
         paddingTop: 50,
         textAlign: 'justify'
     },
